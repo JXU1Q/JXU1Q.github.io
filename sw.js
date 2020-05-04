@@ -28,8 +28,6 @@ var precacheUrls = [];
 
   precacheUrls.push('/posts/55988.html');
 
-  precacheUrls.push('/posts/6.html');
-
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":30};
 
