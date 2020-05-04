@@ -4,8 +4,11 @@
 
 <head><link rel=manifest href=/manifest.json>
     <meta charset="utf-8">
-    <meta name="keywords" content="本博客搭建详细教程, 博客">
-    <meta name="description" content="本博客搭建详细教程">
+    <meta name="keywords" content="01背包, 博客">
+    <meta name="description" content="问题描述
+设有一个背包，容量为$V$，现有$n$种物品，每件物品体积为 $v_i$, 价值为$p_i$, 请问背包装的物品价值最大是多少？
+
+分析因为每种物品只有两种状态：要么取， 要么不取， 故称之为01背包。若用暴力解法，分析每一种情况">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +18,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
     <meta name="referrer" content="no-referrer">
-    <title>本博客搭建详细教程 | 5a2j5l</title>
+    <title>01背包 | 5a2j5l</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -346,7 +349,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">本博客搭建详细教程</h1>
+                    <h1 class="description center-align post-title">01背包</h1>
                 </div>
             </div>
         </div>
@@ -456,31 +459,14 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">教程</span>
-                                </a>
-                            
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/GitHub/">
-                                    <span class="chip bg-color">GitHub</span>
+                                <a href="/tags/algorithm/">
+                                    <span class="chip bg-color">algorithm</span>
                                 </a>
                             
                         </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                        <div class="post-cate">
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                                <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
-                                </a>
-                            
-                        </div>
                     
                 </div>
             </div>
@@ -489,21 +475,21 @@
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                        2019-12-27
+                        2020-05-03
                     </div>
                 
 
                 
                     <div class="post-date info-break-policy">
                         <i class="fa fa-calendar-check-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                        2020-05-04
+                        2020-05-03
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        85
+                        322
                     </div>
                 
 
@@ -520,9 +506,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="本博客详细教程地址："><a href="#本博客详细教程地址：" class="headerlink" title="本博客详细教程地址："></a>本博客详细教程地址：</h2><p>系列教程：</p>
-<ul>
-<li><a href="http://sitoi.cn/posts/6666.html">基于 Hexo GitHub 从零开始搭建个人博客（一）：环境准备篇</a></li>
+                <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote>
+<p>设有一个背包，容量为$V$，现有$n$种物品，每件物品体积为 $v_i$, 价值为$p_i$, 请问背包装的物品价值最大是多少？</p>
+</blockquote>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为每种物品只有两种状态：要么取， 要么不取， 故称之为<strong>01背包</strong>。若用暴力解法，分析每一种情况，则复杂度为 $o(2^n)$ （对$n$件物品而言，每件都有两种可能，故为$2^n$）。<br>而从第一件物品按顺序来分析每件物品时，总价值只与是否放入当前物品以及放入之前背包状态有关，可用一个二维数组$f[i][v]$表示。其中$i$表示当前考虑第$i$件物品，而$v$表示考虑第$i$件物品时背包所剩容量，$f[i][v]$储存的值就是考虑前$i$件物品时所能得到的最大价值。<br>由此定义很容易得出<strong>递推关系式</strong>(<strong>状态转移式</strong>)为：<br>$$<br>f[i][v] = max(f[i - 1][v],\ \  f[i - 1][v - v_i] + p_i)<br>$$</p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><ul>
+<li><input disabled="" type="checkbox"> 待更新 </li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -555,16 +544,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">教程</span>
-                                </a>
-                            
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/GitHub/">
-                                    <span class="chip bg-color">GitHub</span>
+                                <a href="/tags/algorithm/">
+                                    <span class="chip bg-color">algorithm</span>
                                 </a>
                             
                         </div>
@@ -610,27 +591,27 @@
                 <div class="article-badge left-badge text-color">
                     <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
                 <div class="card">
-                    <a href="/posts/9711.html">
+                    <a href="/posts/55988.html">
                         <div class="card-image">
                             
                                 
-                                <img src="https://cdn.jsdelivr.net/gh/5a2j5l/cdn/img/IMG_20200425_155122.jpg" class="responsive-img" alt="01背包">
+                                <img src="https://cdn.jsdelivr.net/gh/5a2j5l/cdn/img/IMG_20200425_155122.jpg" class="responsive-img" alt="about">
                             
-                            <span class="card-title">01背包</span>
+                            <span class="card-title">about</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                问题描述
-设有一个背包，容量为$V$，现有$n$种物品，每件物品体积为 $v_i$, 价值为$p_i$, 请问背包装的物品价值最大是多少？
-
-分析因为每种物品只有两种状态：要么取， 要么不取， 故称之为01背包。若用暴力解法，分析每一种情况
+                                关于本站使用 hexo建立，基于gitee pages
+建站教程
+安装 nodejs 环境一开始我直接使用homebrew安装nodejs$ brew install node
+后面发现deploy的时候总是出错，在GitHub上发现有人提
                             
                         </div>
                         <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-03
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-04
                         </span>
                             <span class="publish-author">
                                 
@@ -641,21 +622,13 @@
                         </div>
                     </div>
                     
-                        <div class="card-action article-tags">
-                            
-                                <a href="/tags/algorithm/">
-                                    <span class="chip bg-color">algorithm</span>
-                                </a>
-                            
-                        </div>
-                    
                 </div>
             </div>
         
         
             <div class="article col s12 m6" data-aos="fade-up">
                 <div class="article-badge right-badge text-color">
-                    本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                    下一篇&nbsp;<i class="fa fa-chevron-right"></i>
                 </div>
                 <div class="card">
                     <a href="/posts/6.html">
@@ -689,7 +662,6 @@
                             </span>
                         </div>
                     </div>
-
                     
                         <div class="card-action article-tags">
                             
@@ -838,6 +810,13 @@
 
 </main>
 
+
+    <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        });
+    </script>
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">

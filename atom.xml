@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://5a2j5l.github.io/"/>
-  <updated>2020-05-04T02:41:33.704Z</updated>
+  <updated>2020-05-04T06:00:46.089Z</updated>
   <id>https://5a2j5l.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://5a2j5l.github.io/posts/55988.html"/>
     <id>https://5a2j5l.github.io/posts/55988.html</id>
     <published>2020-05-04T01:36:46.000Z</published>
-    <updated>2020-05-04T02:41:33.704Z</updated>
+    <updated>2020-05-04T06:00:46.089Z</updated>
     
     <content type="html"><![CDATA[<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>本站使用 <a href="https://hexo.io"><strong>hexo</strong></a>建立，基于<a href="https://www.gitee.com"><strong>gitee pages</strong></a></p><h3 id="建站教程"><a href="#建站教程" class="headerlink" title="建站教程"></a>建站教程</h3><ul><li><strong>安装 nodejs 环境</strong><br>一开始我直接使用homebrew安装nodejs<pre class="line-numbers language-shell"><code class="language-shell">$ brew install node<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>后面发现deploy的时候总是出错，在GitHub上发现有人提了一样的issue，原来是hexo当前版本还不支持nodejs &gt;= 14。于是卸载之，安装node12<pre class="line-numbers language-shell"><code class="language-shell">$ brew uninstall node$ brew install node@12<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><strong>安装 hexo</strong><br>  使用npm安装<pre class="line-numbers language-shell"><code class="language-shell">  $ npm install -g hexo-cli  $ npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>  当然也可以使用yarn安装<br>  <del>据说yarn比npm快，反正我没感觉出来</del><pre class="line-numbers language-shell"><code class="language-shell">  $ yarn global add hexo-cli  $ yarn add hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><strong>建立博客文件夹并初始化</strong><pre class="line-numbers language-shell"><code class="language-shell">$ mkdir blog // 名字自己随便取$ cd blog // 进入文件夹$ hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>  然后hexo就会自动生成一个初始的博客模板 <del>（虽然很丑）</del></li><li><strong>更换主题</strong><br><del>（可选）能忍受默认的主题就不换了吧</del><br>在 <a href="http://hexo.io/themes"><strong>hexo themes</strong></a>挑选喜欢的主题，然后按照对应主题的README文件配置，此处不赘述 <del>（主要是懒）</del></li><li><strong>部署</strong><br>做完前面那些还是只能自己看图个乐，真要变成“网站”还得部署到服务器上。这里使用gitee pages部署。<ul><li>建库<br> 先在gitee上建立一个用于博客的库，并在服务里开启gitee pages<br> (ps:gitee pages 免费版并不会随着你的库的更新而更新网页，需要手动点更新)</li><li>在gitee上添加ssh公钥<pre class="line-numbers language-shell"><code class="language-shell">  $ ssh-keygen -t rsa -C "xxx@xxx.com" //生成ssh  $ cat .ssh/id_rsa.pub //打印公钥<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>  其中<a href="mailto:xxx@xxx.com">xxx@xxx.com</a>使用你的邮箱地址<br>  然后把打印出的一大坨东西全部复制，添加到gitee上</li><li>更改 _config.yml<br>  在blog根文件夹找到_config.yml，在文件末尾找到deploy相关设置，更改为<pre class="line-numbers language-yml"><code class="language-yml">  deploy:    type: git    repo: gitee.com/$username/$reponame    branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>  <strong>注意 !!!：  每个冒号后面必须加空格，不然会报错</strong><br>  其中$username改为你在gitee注册的用户名，$reponame改为你在gitee建立的仓库名</li></ul></li></ul><ul><li><strong>开始写博客</strong><br>经过前面一系列折腾以后，终于可以在自己的博客上写文章了。要新建一篇文章可以用命令<pre class="line-numbers language-shell"><code class="language-shell">$ hexo new 标题<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>hexo将自动在 sources\_posts\下生成一个标题.md文件，编辑该文件即可。<br>写完后，通过hexo自动部署到gitee<pre class="line-numbers language-shell"><code class="language-shell">$ hexo clean$ hexo g$ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>这样就大功告成啦！</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -35,6 +35,31 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>01背包</title>
+    <link href="https://5a2j5l.github.io/posts/9711.html"/>
+    <id>https://5a2j5l.github.io/posts/9711.html</id>
+    <published>2020-05-03T12:47:06.000Z</published>
+    <updated>2020-05-03T13:29:15.467Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p>设有一个背包，容量为$V$，现有$n$种物品，每件物品体积为 $v_i$, 价值为$p_i$, 请问背包装的物品价值最大是多少？</p></blockquote><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为每种物品只有两种状态：要么取， 要么不取， 故称之为<strong>01背包</strong>。若用暴力解法，分析每一种情况，则复杂度为 $o(2^n)$ （对$n$件物品而言，每件都有两种可能，故为$2^n$）。<br>而从第一件物品按顺序来分析每件物品时，总价值只与是否放入当前物品以及放入之前背包状态有关，可用一个二维数组$f[i][v]$表示。其中$i$表示当前考虑第$i$件物品，而$v$表示考虑第$i$件物品时背包所剩容量，$f[i][v]$储存的值就是考虑前$i$件物品时所能得到的最大价值。<br>由此定义很容易得出<strong>递推关系式</strong>(<strong>状态转移式</strong>)为：<br>$$<br>f[i][v] = max(f[i - 1][v],\ \  f[i - 1][v - v_i] + p_i)<br>$$</p><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><ul><li><input disabled="" type="checkbox"> 待更新 </li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;设有一个背包，容量为$V$，现有$n$种物品，每件物品体积为 $v_i$, 价值为$p_i$, 请
+      
+    
+    </summary>
+    
+    
+    
+      <category term="algorithm" scheme="https://5a2j5l.github.io/tags/algorithm/"/>
     
   </entry>
   
