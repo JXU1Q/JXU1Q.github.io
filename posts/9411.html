@@ -495,7 +495,7 @@
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        613
+                        614
                     </div>
                 
 
@@ -518,15 +518,15 @@
 <ul>
 <li><p><strong>数列极限的定义</strong><br>数列极限即为一维数轴上点列的极限，可定义如下</p>
 <blockquote>
-<p>$\lim \limits_{x \to + \infin}a_n = a \Longleftrightarrow$对于数轴上的点列 $a_n$， 若$\forall \epsilon, \ \ \exists N \in \R$, 使得当 $n &gt; N$ 时， $|a_n - a| &lt; \epsilon$</p>
+<p>$\lim \limits_{x \to + \infty}a_n = a \Longleftrightarrow$对于数轴上的点列 $a_n$， 若$\forall \epsilon, \ \ \exists N \in \Bbb R$, 使得当 $n &gt; N$ 时， $|a_n - a| &lt; \epsilon$</p>
 </blockquote>
 <p>  也就是说，当 $n$ 足够大时，点列 $a_n$ 中的点与点 $a$ 的距离趋于 0。故另一种表达方式为</p>
 <blockquote>
-<p>$\lim \limits_{n \to +\infin}|a_n - a| = 0$</p>
+<p>$\lim \limits_{n \to +\infty}|a_n - a| = 0$</p>
 </blockquote>
 <p>  若定义 $\rho\ (a_1,\ a_2) = distance\ (a_1,\ a_2) = |a_1 - a_2|$, 则可以表示为</p>
 <blockquote>
-<p>$\lim \limits_{n \to +\infin} \rho\ (a_n,\ a) = 0$</p>
+<p>$\lim \limits_{n \to +\infty} \rho\ (a_n,\ a) = 0$</p>
 </blockquote>
 </li>
 <li><p><strong>函数的定义</strong></p>
@@ -541,7 +541,7 @@
 </blockquote>
 <p>同时， 函数的极限存在若干性质，以下列举部分：</p>
 <ol>
-<li><p><strong>海涅(Heine)定理</strong></p>
+<li><p><strong>海涅（Heine）定理</strong></p>
 <blockquote>
 <p>$\lim \limits_{x \to x_0}f(x)=a \Longleftrightarrow$ 对任意收敛于 $x_0$ 的数列 $a_n$，$a_n \not ={x_0}$, 有$\lim \limits_{n \to \infty}f(a_n)=a$ </p>
 </blockquote>
@@ -549,7 +549,7 @@
 </li>
 <li><p><strong>四则运算</strong></p>
 <blockquote>
-<p>若有 $\lim \limits_{x \to x_0}f(x)=a,\ \lim \limits_{x \to x_0}g(x)=b$ 则<br>$\lim \limits_{x \to x_0}f(x)\plusmn g(x)=a\plusmn b$<br>$\lim \limits_{x \to x_0}f(x)\cdot g(x)=ab$,<br>若 $b \not ={0}$，则 $\lim \limits_{x \to x_0}\frac{f(x)}{g(x)}=\frac{a}{b}$</p>
+<p>若有 $\lim \limits_{x \to x_0}f(x)=a,\ \lim \limits_{x \to x_0}g(x)=b$ 则<br>$\lim \limits_{x \to x_0}f(x)\pm g(x)=a\pm b$<br>$\lim \limits_{x \to x_0}f(x)\cdot g(x)=ab$,<br>若 $b \not ={0}$，则 $\lim \limits_{x \to x_0}\frac{f(x)}{g(x)}=\frac{a}{b}$</p>
 </blockquote>
 <details>s
 <summary> 证明 </summary>
@@ -1058,7 +1058,7 @@
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1588742433260')
+  navigator.serviceWorker.register('/sw.js?t=1588743210815')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
@@ -1081,10 +1081,10 @@
             }
           }
         });
-        </script><script>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":240,"height":320},"mobile":{"show":true},"react":{"opacity":0.9}});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":240,"height":320},"mobile":{"show":true},"react":{"opacity":0.9}});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
