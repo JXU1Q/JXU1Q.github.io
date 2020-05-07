@@ -15,7 +15,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="white"/>
     <meta name="referrer" content="no-referrer">
-    <title>海涅定理的证明 | 5a2j5l</title>
+    <title>多变量微积分(一) | 5a2j5l</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -341,12 +341,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/5a2j5l/cdn/img/20200507040643.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/5a2j5l/cdn/img/20200507040714.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">海涅定理的证明</h1>
+                    <h1 class="description center-align post-title">多变量微积分(一)</h1>
                 </div>
             </div>
         </div>
@@ -495,14 +495,14 @@
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        199
+                        601
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                 
 
@@ -513,15 +513,46 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<h2 id="海涅定理的证明"><a href="#海涅定理的证明" class="headerlink" title="海涅定理的证明"></a>海涅定理的证明</h2></blockquote>
+<h4 id="单变量时的情况"><a href="#单变量时的情况" class="headerlink" title="单变量时的情况"></a>单变量时的情况</h4></blockquote>
+<p>多变量函数实际上是单变量函数的推广，故其各种定义均可在单变量函数中寻找到原型。所以我们先从单变量函数的连续性看起。</p>
 <ul>
-<li><strong>必要性</strong><blockquote>
-<p>若有 $\lim \limits_{x \to x_0}f(x)=a$ , 即对于 $\forall \epsilon &gt; 0， \exists \delta &gt; 0 $ 当 $|x - x_0|&lt;\delta$ 时有 $|f(x) - a|&lt;\epsilon$ .又已知数列 $a_n$ 的极限为 $x_0$, 即对于$\forall \epsilon &gt; 0, \exists N &gt; 0$, 当 $n &gt; N$ 时有 $|a_n - x_0| &lt; \epsilon$ .<br>因此， $\exists N_0 &gt; 0$  使得 $|a_n - x_0| &lt; \delta$, 此时有 $|f(a_n) - a|&lt;\epsilon$。故得 $\lim \limits_{n \to \infty}f(a_n)=a$.</p>
+<li><p><strong>数列极限的定义</strong><br>数列极限即为一维数轴上点列的极限，可定义如下</p>
+<blockquote>
+<p>$\lim \limits_{x \to + \infty}a_n = a \Longleftrightarrow$对于数轴上的点列 $a_n$， 若$\forall \epsilon, \ \ \exists N \in \Bbb R$, 使得当 $n &gt; N$ 时， $|a_n - a| &lt; \epsilon$</p>
+</blockquote>
+<p>  也就是说，当 $n$ 足够大时，点列 $a_n$ 中的点与点 $a$ 的距离趋于 0。故另一种表达方式为</p>
+<blockquote>
+<p>$\lim \limits_{n \to +\infty}|a_n - a| = 0$</p>
+</blockquote>
+<p>  若定义 $\rho\ (a_1,\ a_2) = distance\ (a_1,\ a_2) = |a_1 - a_2|$, 则可以表示为</p>
+<blockquote>
+<p>$\lim \limits_{n \to +\infty} \rho\ (a_n,\ a) = 0$</p>
 </blockquote>
 </li>
-<li><strong>充分性</strong><blockquote>
-<p>假设 $\lim \limits_{x \to x_0}f(x)= A \not ={a},$ 则由充分性得知, 此时 $\lim \limits_{n \to \infty}f(a_n)=A\not ={a},$ 与题设矛盾. Q.E.D</p>
+<li><p><strong>函数的定义</strong></p>
+<blockquote>
+<p>对于两个非空数集 $A$ 和 $B$， 若存在一确定的对应法则 $f$, 使得对于集合 $A$ 中任意一个数 $x$, 在集合 $B$ 中都有唯一的数 $f(x)$ 与之对应，则称 $f:A\to B$ 为从集合 $A$ 到集合 $B$ 的一个<strong>函数</strong>， 记作 $y = f(x)$</p>
 </blockquote>
+<p>其中集合 $A$ 称为<strong>定义域</strong>，集合 $B$ 称为<strong>陪域</strong>，定义域、陪域和对应法则确定了一个（单变量）函数。</p>
+</li>
+<li><p><strong>函数的极限</strong></p>
+<blockquote>
+<p>$\lim \limits_{x \to x_0}f(x) = a \Longleftrightarrow$ 若函数 $f(x)$ 在 $x_0$ 的去心邻域内有定义，且对 $\forall \epsilon &gt; 0, \ \exists \delta&gt;0$，使得当$|x - x_0| &lt; \delta$ 时有 $|f(x) - a|&lt;\epsilon$</p>
+</blockquote>
+<p>同时， 函数的极限存在若干性质，以下列举部分：</p>
+<ol>
+<li><p><strong>海涅（Heine）定理</strong>   <a href="1111.html">证明</a> </p>
+<blockquote>
+<p>$\lim \limits_{x \to x_0}f(x)=a \Longleftrightarrow$ 对任意收敛于 $x_0$ 的数列 $a_n$，$a_n \not ={x_0}$, 有$\lim \limits_{n \to \infty}f(a_n)=a$ </p>
+</blockquote>
+<p>从直观上来说， 海涅定理表明，$x$ 不论以何种方式趋近于 $x_0$ 都不会改变函数极限的结果。因为所有趋于 $x_0$ 的数列 $a_n$ 实际上就包含了所有方式。</p>
+</li>
+<li><p><strong>四则运算</strong>  </p>
+<blockquote>
+<p>若有 $\lim \limits_{x \to x_0}f(x)=a,\ \lim \limits_{x \to x_0}g(x)=b$ 则<br>$\lim \limits_{x \to x_0}f(x)\pm g(x)=a\pm b$<br>$\lim \limits_{x \to x_0}f(x)\cdot g(x)=ab$,<br>若 $b \not ={0}$，则 $\lim \limits_{x \to x_0}\frac{f(x)}{g(x)}=\frac{a}{b}$</p>
+</blockquote>
+</li>
+</ol>
 </li>
 </ul>
 <script>
@@ -598,9 +629,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-            <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
                 <div class="article-badge left-badge text-color">
-                    <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                    <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+                </div>
                 <div class="card">
                     <a href="/posts/9411.html">
                         <div class="card-image">
@@ -618,9 +650,59 @@
                             
                         </div>
                         <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                    
+                                        <a href="/categories/calculus/" class="post-category">
+                                    calculus
+                                </a>
+                                    
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                        <div class="card-action article-tags">
+                            
+                                <a href="/tags/calculus/">
+                                    <span class="chip bg-color">calculus</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+            </div>
+        
+        
+            <div class="article col s12 m6" data-aos="fade-up">
+                <div class="article-badge right-badge text-color">
+                    下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="card">
+                    <a href="/posts/1111.html">
+                        <div class="card-image">
+                            
+                                
+                                <img src="https://cdn.jsdelivr.net/gh/5a2j5l/cdn/img/20200507040643.png" class="responsive-img" alt="海涅定理的证明">
+                            
+                            <span class="card-title">海涅定理的证明</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                多变量函数及其连续性
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-06
+                            </span>
                             <span class="publish-author">
                                 
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -641,43 +723,6 @@
                                 </a>
                             
                         </div>
-                    
-                </div>
-            </div>
-        
-        
-            <div class="article col s12 m6" data-aos="fade-up">
-                <div class="article-badge right-badge text-color">
-                    下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-                </div>
-                <div class="card">
-                    <a href="/posts/55988.html">
-                        <div class="card-image">
-                            
-                                
-                                <img src="https://cdn.jsdelivr.net/gh/5a2j5l/cdn/img/20200507041740.png" class="responsive-img" alt="about">
-                            
-                            <span class="card-title">about</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                关于本站
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-04
-                            </span>
-                            <span class="publish-author">
-                                
-                                    <i class="fa fa-user fa-fw"></i>
-                                    5a2j5l
-                                
-                            </span>
-                        </div>
-                    </div>
                     
                 </div>
             </div>
@@ -1021,7 +1066,7 @@
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1588846840894')
+  navigator.serviceWorker.register('/sw.js?t=1588847012820')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
@@ -1044,10 +1089,10 @@
             }
           }
         });
-        </script><script>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":240,"height":320},"mobile":{"show":true},"react":{"opacity":0.9}});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":240,"height":320},"mobile":{"show":true},"react":{"opacity":0.9}});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
