@@ -495,14 +495,14 @@
                 
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        601
+                        1k
                     </div>
                 
 
                 
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        4 分
                     </div>
                 
 
@@ -549,10 +549,29 @@
 </li>
 <li><p><strong>四则运算</strong>  </p>
 <blockquote>
-<p>若有 $\lim \limits_{x \to x_0}f(x)=a,\ \lim \limits_{x \to x_0}g(x)=b$ 则<br>$\lim \limits_{x \to x_0}f(x)\pm g(x)=a\pm b$<br>$\lim \limits_{x \to x_0}f(x)\cdot g(x)=ab$,<br>若 $b \not ={0}$，则 $\lim \limits_{x \to x_0}\frac{f(x)}{g(x)}=\frac{a}{b}$</p>
+<p>若有 $\lim \limits_{x \to x_0}f(x)=a,\ \lim \limits_{x \to x_0}g(x)=b$ 则<br> $\lim \limits_{x \to x_0}f(x)\pm g(x)=a\pm b$<br> $\lim \limits_{x \to x_0}f(x)\cdot g(x)=ab$,<br> 若 $b \not ={0}$，则 $\lim \limits_{x \to x_0}\frac{f(x)}{g(x)}=\frac{a}{b}$</p>
 </blockquote>
 </li>
 </ol>
+</li>
+<li><p><strong>函数的连续性</strong></p>
+<blockquote>
+<p>设 $f(x)$ 在 $x_0$ 的邻域有定义， 若 $\lim \limits_{x \to x_0}f(x)=f(x_0)$, 则称 $f$ 在 $x_0$ 连续， 若 $f$ 在区间  $D$ 内每个点都连续， 则称  $f$ 在  $D$ 上连续 </p>
+<h4 id="多变量时的推广"><a href="#多变量时的推广" class="headerlink" title="多变量时的推广"></a>多变量时的推广</h4><p>前面介绍了单变量时的情况，那么将单变量情况推广到多变量时，最基础的定义也要进行推广。</p>
+</blockquote>
+</li>
+<li><p><strong>基本定义</strong></p>
+<ul>
+<li>绝对值（距离）<br>在单变量微积分中，一般用绝对值来刻画数轴上两点的距离。若将数轴扩充为二维平面，则绝对值的概念也将扩充。<ol>
+<li>将一个数的绝对值推广为各个变量的绝对值<br>即用 $|x - x_0| &lt; \epsilon,\ |y - y_0|&lt;\epsilon$ 来刻画平面两点 $M(x,\ y)\ \ \ M_0(x_0,\ y_0)$ 无限趋近</li>
+<li>将数轴上两点的距离推广为平面上两点的距离<br>即用 $\rho(M,\ M_0)=\sqrt{(x-x_0)^2+(y-y_0)^2}$ 来代替绝对值</li>
+</ol>
+<ul>
+<li>邻域<br>单变量邻域定义为 ${x\ |\ |x - x_0| &lt; r}$<br>则直接将绝对值取代即可，故可定义为<br>${(x,\ y)\ |\ |x -x_0|&lt;r,\ |y - y_0|&lt;r}$<br>或${(x,\ y)\ | \rho(M,\ M_0)&lt;r}$, 记做$B(M_0,\ r)$,  去心邻域记做 $B_(M_0,\ r)$</li>
+<li>点集<br>在单变量情况下点集表现为一维数轴， 因而点与点集的关系只有属于不属于等简单情况。但若把数轴扩充为二维平面，则情况会复杂很多。对于平面点集 $E$:<br>(1) 内点<br> ${M\ |\ \exists r&gt;0\ s.t.\ B(M,\ r)\subset E}$<br> 该集合每一元素称为平面点集 $E$的内点，集合称为平面点集 $E$的核， 记做 $E\degree$<br>(2) 外点</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <script>
@@ -868,7 +887,7 @@
             
                 
                     &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                            class="white-color">1.7k</span>&nbsp;字
+                            class="white-color">2.2k</span>&nbsp;字
                 
                 
                 <script>
@@ -1052,7 +1071,7 @@
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1588847257252')
+  navigator.serviceWorker.register('/sw.js?t=1588850182604')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
