@@ -100,7 +100,7 @@
     <link href="https://5a2j5l.github.io/posts/9711.html"/>
     <id>https://5a2j5l.github.io/posts/9711.html</id>
     <published>2020-05-03T12:47:06.000Z</published>
-    <updated>2020-05-10T18:32:21.485Z</updated>
+    <updated>2020-05-10T18:39:30.455Z</updated>
     
     <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote><p>设有一个背包，容量为$V$，现有$n$种物品，每件物品体积为 $v_i$, 价值为$p_i$, 请问背包装的物品价值最大是多少？</p></blockquote><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为每种物品只有两种状态：要么取， 要么不取， 故称之为<strong>01背包</strong>。若用暴力解法，分析每一种情况，则复杂度为 $o(2^n)$ （对$n$件物品而言，每件都有两种可能，故为$2^n$）。<br>而从第一件物品按顺序来分析每件物品时，总价值只与是否放入当前物品以及放入之前背包状态有关，可用一个二维数组$f[i][v]$表示。其中$i$表示当前考虑第$i$件物品，而$v$表示考虑第$i$件物品时背包所剩容量，$f[i][v]$储存的值就是考虑前$i$件物品时所能得到的最大价值。<br>由此定义很容易得出<strong>递推关系式</strong>(<strong>状态转移式</strong>)为：<br>$$<br>f[i][v] = max(f[i - 1][v],\ \  f[i - 1][v - v_i] + p_i)<br>$$</p><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><ul><li><input disabled="" type="checkbox"> 待更新 </li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
