@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://5a2j5l.github.io/diary/index.html</loc>
+    
+    <lastmod>2020-05-10T17:30:35.055Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://5a2j5l.github.io/posts/9411.html</loc>
     
     <lastmod>2020-05-08T13:32:28.091Z</lastmod>
@@ -37,6 +44,13 @@
   </url>
   
   <url>
+    <loc>https://5a2j5l.github.io/about/index.html</loc>
+    
+    <lastmod>2020-05-04T03:31:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://5a2j5l.github.io/archives/index.html</loc>
     
     <lastmod>2020-05-04T03:31:35.000Z</lastmod>
@@ -44,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://5a2j5l.github.io/about/index.html</loc>
+    <loc>https://5a2j5l.github.io/categories/index.html</loc>
     
     <lastmod>2020-05-04T03:31:35.000Z</lastmod>
     
@@ -58,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://5a2j5l.github.io/tags/index.html</loc>
-    
-    <lastmod>2020-05-04T03:31:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://5a2j5l.github.io/friends/index.html</loc>
     
     <lastmod>2020-05-04T03:31:35.000Z</lastmod>
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://5a2j5l.github.io/categories/index.html</loc>
+    <loc>https://5a2j5l.github.io/tags/index.html</loc>
     
     <lastmod>2020-05-04T03:31:35.000Z</lastmod>
     
